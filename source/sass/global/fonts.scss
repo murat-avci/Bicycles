@@ -1,0 +1,21 @@
+/* open-sans-regular - cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  display: swap;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/open-sans-v23-cyrillic-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-v23-cyrillic-regular.woff') format('woff');
+}
+
+/* open-sans-600 - cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  display: swap;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/open-sans-v23-cyrillic-600.woff2') format('woff2'),
+       url('../fonts/open-sans-v23-cyrillic-600.woff') format('woff');
+}

@@ -71,7 +71,7 @@ gulp.task("webp", function () {
 gulp.task("sprite", function () {
   return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
     .pipe(svgstore({ inlineSvg: true }))
-    .pipe(rename("sprite_auto.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 });
 
@@ -94,7 +94,7 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source//*.ico"
+    "source//icon*"
   ], {
     base: "source"
   })
