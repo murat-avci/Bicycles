@@ -1,0 +1,18 @@
+.types {
+  padding: 149px 157px 147px;
+}
+
+.types__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.types__item {
+  &:first-child {
+    margin-top: 10px;
+  }
+
+  &:nth-child(2) {
+    margin-top: 39px;
+  }
+}

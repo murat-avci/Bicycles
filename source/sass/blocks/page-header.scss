@@ -1,0 +1,12 @@
+.page-header {
+  padding-top: 21px;
+  background-color: rgba($color: $basic-black, $alpha: 0.5);
+  padding-bottom: 240px;
+}
+
+.page-header__wrap {
+  display: grid;
+  grid-template-columns: 393px 1fr;
+  column-gap: 160px;
+  margin: 256px 280px 0;
+}

@@ -1,0 +1,14 @@
+.benefits {
+  padding: 150px 137px 130px;
+  text-align: center;
+}
+
+.benefits__wrap {
+  margin-top: 102px;
+}
+
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 38px;
+}
