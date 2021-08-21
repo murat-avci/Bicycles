@@ -74,7 +74,7 @@
   }
 }
 
-figcaption {
+.types__item-title {
   @include text(22px,34px,600,$basic-black);
   margin-top: 20px;
   letter-spacing: -0.5px;
