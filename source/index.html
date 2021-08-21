@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Проект «Велосипеды» от HTML Academy</title>
@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="./fonts/open-sans-v23-cyrillic-300.woff2" as="font/woff2" crossOrigin="anonymous">
   <link rel="preload" href="./fonts/open-sans-v23-cyrillic-regular.woff2" as="font/woff2" crossOrigin="anonymous">
   <link rel="preload" href="./fonts/open-sans-v23-cyrillic-600.woff2" as="font/woff2" crossOrigin="anonymous">
   <link rel="preload" href="./fonts/open-sans-v23-cyrillic-700.woff2" as="font/woff2" crossOrigin="anonymous">
@@ -16,25 +17,27 @@
     <header class="page-header">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="#benefits" class="main-nav__link">О нас</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#types" class="main-nav__link">Виды велосипедов</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#video" class="main-nav__link">Видео про велосипеды</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#contacts" class="main-nav__link">Контакты</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrap">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#benefits" class="main-nav__link">О нас</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#types" class="main-nav__link">Виды велосипедов</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#video" class="main-nav__link">Видео про велосипеды</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#contacts" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <section class="page-header__wrap">
         <h2 class="visually-hidden">Intro</h2>
         <div class="intro">
-          <a href="" class="intro__link">
+          <a href="#" class="intro__link">
             <img src="./img/logo.svg" width="67" height="20" alt="Логотип Moon">
           </a>
           <h1 class="intro__title">Мы продаем велосипеды</h1>
@@ -61,16 +64,16 @@
         <section class="benefits" id="benefits">
           <h2 class="benefits__title">Несколько фактов о нас</h2>
           <div class="benefits__wrap">
-            <ul class="benefits__list">
+            <ol class="benefits__list">
               <li class="benefits__item">Самый широкий выбор велосипедов!</li>
               <li class="benefits__item">Доставка велосипедов по всей России!</li>
               <li class="benefits__item">Большой выбор крутых аксессуаров!</li>
               <li class="benefits__item">Профессиональные консультации!</li>
-            </ul>
+            </ol>
           </div>
         </section>
         <section class="types" id="types">
-          <h2 class="visually-hidden">Виды велосипедов</h2>
+          <h2 class="types__title">Виды велосипедов</h2>
           <div class="types__wrap">
             <ul class="types__list">
               <li class="types__item">
@@ -78,9 +81,9 @@
                   <picture>
                     <source type="image/webp" srcset="./img/road-bike-desktop@1x.webp 1x, ./img/road-bike-desktop@2x.webp 2x">
                     <img class="types__img" src="./img/road-bike-desktop@1x.jpg" srcset="./img/road-bike-desktop@2x.jpg 2x" width="342" height="503" alt="Дорожный велосипед">
-                  </picture> 
-                  <figcaption>Дорожный велосипед</figcaption>        
-                </figure>                       
+                  </picture>
+                  <figcaption>Дорожный велосипед</figcaption>
+                </figure>
               </li>
               <li class="types__item">
                 <figure>
@@ -89,7 +92,7 @@
                     <img class="types__img" src="./img/mountain-bike-desktop@1x.jpg" srcset="./img/mountain-bike-desktop@2x.jpg 2x" width="342" height="566" alt="Горный велосипед">
                   </picture>
                   <figcaption>Горный велосипед</figcaption>
-                </figure>                
+                </figure>
               </li>
               <li class="types__item">
                 <figure>
@@ -98,7 +101,7 @@
                     <img src="./img/kids-bike-desktop@1x.jpg" srcset="./img/kids-bike-desktop@2x.jpg 2x" width="342" height="512" alt="Детский велосипед">
                   </picture>
                 </figure>
-                <figcaption>Детский велосипед</figcaption>                
+                <figcaption>Детский велосипед</figcaption>
               </li>
             </ul>
           </div>
@@ -117,17 +120,27 @@
           <div class="map__wrap">
             <h2 class="map__title">Как нас найти?</h2>
             <p class="map__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-            <div class="map__iframe"></div>
+            <div class="map__iframe">
+              <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412367!2d30.320894615677194!3d59.93879686904843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2str!4v1629572465679!5m2!1sru!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
           </div>
         </section>
       </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__contacts" id="contacts">
-        <a class="page-footer__link" href="mailto:puteshestviemechta@gmail.ru" >puteshestviemechta@gmail.ru</a>
-        <a href="tel:+7(499)78468446" class="page-footer__link">+7 (499) -784-684-46</a>
+        <a class="page-footer__link page-footer__link--email" href="mailto:puteshestviemechta@gmail.ru" >
+          <svg class="page-footer__email-icon" width="26" height="20">
+            <use xlink:href="img/sprite.svg#icon-email"></use>
+          </svg>
+          puteshestviemechta@gmail.ru</a>
+        <a href="tel:+7(499)78468446" class="page-footer__link page-footer__link--tel">
+          <svg class="page-footer__phone-icon" width="17" height="24">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46</a>
       </div>
     </footer>
-  </div> 
+  </div>
 </body>
 </html>

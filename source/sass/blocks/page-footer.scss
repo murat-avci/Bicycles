@@ -1,0 +1,30 @@
+.page-footer {
+  padding: 38px 444px 96px 438px;
+}
+
+.page-footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__link {
+  @include text(16px,22px,400,$basic-black);
+  display: inline-block;
+  position: relative;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.page-footer__email-icon {
+  position: absolute;
+  top: 2px;
+  left: -41px;
+}
+
+.page-footer__phone-icon {
+  position: absolute;
+  top: 0;
+  left: -37px;
+  fill: none;
+}

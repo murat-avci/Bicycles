@@ -2,6 +2,11 @@
   padding-top: 21px;
   background-color: rgba($color: $basic-black, $alpha: 0.5);
   padding-bottom: 240px;
+  background-image: url("../img/bg-bike-desktop@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 825px;
 }
 
 .page-header__wrap {

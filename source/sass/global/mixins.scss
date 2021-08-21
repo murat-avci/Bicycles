@@ -1,0 +1,18 @@
+@mixin text($size,$height,$weight,$color) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  line-height: $height;
+  color: $color;
+}
+
+@mixin block-title {
+  font: {
+    size: 30px;
+    weight: 600;
+  }
+  line-height: 30px;
+  color: $block-title;
+  letter-spacing: -0.005em;
+}

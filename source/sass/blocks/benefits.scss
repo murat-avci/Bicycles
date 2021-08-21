@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.benefits__title {
+  @include block-title;
+}
+
 .benefits__wrap {
   margin-top: 102px;
 }
@@ -11,4 +15,23 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   column-gap: 38px;
+  counter-reset: num;
+}
+
+.benefits__item {
+  @include text(22px,34px,400,$basic-black);
+  letter-spacing: -0.5px;
+  position: relative;
+
+  &::before {
+    @include text(28px,38px,700,$light-blue);
+    position: absolute;
+    content: counter(num);
+    top: -60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    counter-increment: num;
+    letter-spacing: -1.27273px;
+  }
 }

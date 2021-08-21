@@ -1,0 +1,12 @@
+.intro__title {
+  @include text(46px,64px,700,$basic-white);
+  letter-spacing: -0.005em;
+  margin-top: 30px;
+}
+
+.intro__text {
+  @include text(20px,32px,300,$basic-white);
+  letter-spacing: -0.005em;
+  margin-top: 24px;
+  opacity: 0.8;
+}
