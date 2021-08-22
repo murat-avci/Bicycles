@@ -1,12 +1,16 @@
 .page-header {
   padding-top: 21px;
-  background-color: rgba($color: $basic-black, $alpha: 0.5);
+  background-color: $bg-header;
   padding-bottom: 240px;
   background-image: url("../img/bg-bike-desktop@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 825px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-bike-desktop@2x.jpg");
+  }
 }
 
 .page-header__wrap {
@@ -14,4 +18,25 @@
   grid-template-columns: 393px 1fr;
   column-gap: 160px;
   margin: 256px 280px 0;
+}
+
+@include tablet {
+  .page-header {
+    height: 340px;
+    background-image: url("../../img/bg-bike-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-bike-tablet@2x.jpg");
+    }
+  }
+
+  .page-header__wrap--no-js {
+    background-color: $bg-header;
+  }
+}
+
+@include mobile {
+  .page-header {
+    height: 390px;
+  }
 }

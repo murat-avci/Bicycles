@@ -16,3 +16,15 @@
   color: $block-title;
   letter-spacing: -0.005em;
 }
+
+@mixin tablet {
+  @media (max-width: $desktop-width - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet-width - 1px) {
+    @content;
+  }
+}
