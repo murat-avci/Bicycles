@@ -1,34 +1,91 @@
-.form__field {
-  margin-top: 20px;
-  border: none;
-  padding: 0;
-  width: 100%;
+.form {
+  width: 362px;
+  padding-top: 7px;
 }
 
 .form__text {
   @include text(17px,28px,600,$basic-white);
+  margin-bottom: 19px;
   letter-spacing: -0.005em;
   text-align: center;
+
 }
 
-.form__input {
-  padding-top: 13px;
-  padding-bottom: 11px;
-  padding-left: 30px;
+.form__field {
+  margin-bottom: 20px;
+  border: none;
+}
+
+.form__field input {
   width: 100%;
-  border-radius: 6px;
+  padding: 14px 20px 12px 29px;
+  background: $basic-white;
+  border: 1px solid $border;
+  border-radius: 4px;
 
   &::placeholder {
     @include text(15px,24px,400,$placeholder);
     opacity: 0.5;
   }
+
+  &:hover,
+  &:focus {
+    outline: 2px solid green;
+  }
 }
 
 .form__btn {
   @include text(15px,21px,600,$basic-black);
-  background-color: $light-blue;
-  padding: 15px 47px 15px 48px;
+  width: 326px;
+  height: 51px;
+  background-color: $turquoise;
   border-radius: 6px;
-  margin-top: 20px;
-  width: 100%;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 173px;
+  }
+
+  .form__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $basic-black;
+  }
+
+  .form__field input {
+    padding: 13px 20px 13px 21px;
+  }
+
+  .form__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    width: auto;
+    padding: 0;
+  }
+
+  .form__text {
+    min-height: 84px;
+    margin-bottom: 20px;
+  }
+
+  .form__field input {
+    padding: 13px 21px 13px 25px;
+  }
+
+  .form__btn {
+    width: 100%;
+  }
 }
