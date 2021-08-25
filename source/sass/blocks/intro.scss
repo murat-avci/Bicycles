@@ -3,15 +3,16 @@
   width: 68px;
   height: 23px;
   margin-bottom: 30px;
+  vertical-align: middle;
 }
 
-.intro__title {
+.intro h1 {
   @include text(46px,64px,700,$basic-white);
   margin-bottom: 25px;
   letter-spacing: -0.005em;
 }
 
-.intro__text {
+.intro p {
   @include text(20px,32px,300,$basic-white);
   max-width: 380px;
   letter-spacing: -0.005em;
@@ -32,13 +33,13 @@
     left: 21px;
   }
 
-  .intro__title {
+  .intro h1 {
     margin-bottom: 20px;
     font-size: 30px;
     line-height: 42px;
   }
 
-  .intro__text {
+  .intro p {
     max-width: 700px;
     min-height: 64px;
     margin: 0 auto;
@@ -57,11 +58,11 @@
     left: 16px;
   }
 
-  .intro__title {
+  .intro h1 {
     min-height: 84px;
   }
 
-  .intro__text {
+  .intro p {
     min-height: 96px;
   }
 }

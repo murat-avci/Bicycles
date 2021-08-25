@@ -20,14 +20,14 @@
   padding-bottom: 56px;
 }
 
-.video__title {
+.video h2 {
   @include block-title;
   margin-bottom: 20px;
   padding-right: 10px;
   color: $basic-white;
 }
 
-.video__text {
+.video p {
   @include text(16px,28px,300,$basic-white);
   max-width: 340px;
   margin: 0 auto;
@@ -88,12 +88,12 @@
     padding-bottom: 40px;
   }
 
-  .video__title {
+  .video h2 {
     padding-right: 0;
     font-size: 24px;
   }
 
-  .video__text {
+  .video p {
     max-width: 429px;
   }
 
@@ -129,7 +129,7 @@
     padding-bottom: 53px;
   }
 
-  .video__title {
+  .video h2 {
     padding-right: 11px;
   }
 

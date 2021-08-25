@@ -8,13 +8,13 @@
   text-align: center;
 }
 
-.map__title {
+.map h2 {
   @include block-title;
   margin-bottom: 30px;
   padding-right: 11px;
 }
 
-.map__text {
+.map p {
   @include text(17px,31px,400,$basic-black);
   max-width: 555px;
   margin: 0 auto;
@@ -55,13 +55,13 @@
     margin-bottom: 20px;
   }
 
-  .map__title {
+  .map h2 {
     margin-bottom: 20px;
     padding-right: 0;
     font-size: 24px;
   }
 
-  .map__text {
+  .map p {
     max-width: inherit;
     padding-right: 0;
   }
@@ -86,7 +86,7 @@
     padding-right: 19px;
   }
 
-  .map__title {
+  .map h2 {
     font-size: 18px;
   }
 

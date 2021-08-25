@@ -1,12 +1,12 @@
 {
   "root": true,
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "ecmaVersion": 2018
   },
   "env": {
-    "es2017": true,
-    "browser": true
+    "browser": true,
+    "es6": true
   },
-  "extends": "htmlacademy/vanilla"
+  "extends": "htmlacademy/es5"
 }
+

@@ -3,12 +3,11 @@
   padding-top: 7px;
 }
 
-.form__text {
+.form p {
   @include text(17px,28px,600,$basic-white);
   margin-bottom: 19px;
   letter-spacing: -0.005em;
   text-align: center;
-
 }
 
 .form__field {
@@ -55,7 +54,7 @@
     padding: 0 173px;
   }
 
-  .form__text {
+  .form p {
     margin-bottom: 30px;
     font-size: 18px;
     color: $basic-black;
@@ -76,7 +75,7 @@
     padding: 0;
   }
 
-  .form__text {
+  .form p {
     min-height: 84px;
     margin-bottom: 20px;
   }

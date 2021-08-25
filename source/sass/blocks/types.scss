@@ -4,7 +4,7 @@
   background-color: #f6f7f9;
 }
 
-.types__title {
+.types h2 {
   @include block-title;
   margin-bottom: 49px;
   padding-right: 11px;
@@ -45,6 +45,7 @@
 .types__link {
   display: inline-block;
   margin-bottom: 20px;
+  vertical-align: middle;
 }
 
 .types__link--road::before {
@@ -89,12 +90,12 @@
   border-radius: 50%;
 }
 
-.types__img {
+.types img {
   display: block;
   border-radius: 10px;
 }
 
-.types__item-title {
+.types h3 {
   @include text(22px,34px,600,$basic-black);
   letter-spacing: -0.5px;
 }
@@ -104,7 +105,7 @@
     padding: 49px 89px 16px;
   }
 
-  .types__title {
+  .types h2 {
     margin-bottom: 30px;
     padding-right: 0;
     font-size: 24px;
