@@ -2,33 +2,33 @@
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  display: swap;
   font-weight: 300;
   src: local(""),
     url("../fonts/open-sans-v23-cyrillic-300.woff2") format("woff2"),
     url("../fonts/open-sans-v23-cyrillic-300.woff") format("woff");
+  font-display: swap;
 }
 
 /* open-sans-regular - cyrillic */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  display: swap;
   font-weight: 400;
   src: local(""),
     url("../fonts/open-sans-v23-cyrillic-regular.woff2") format("woff2"),
     url("../fonts/open-sans-v23-cyrillic-regular.woff") format("woff");
+  font-display: swap;
 }
 
 /* open-sans-600 - cyrillic */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  display: swap;
   font-weight: 600;
   src: local(""),
     url("../fonts/open-sans-v23-cyrillic-600.woff2") format("woff2"),
     url("../fonts/open-sans-v23-cyrillic-600.woff") format("woff");
+  font-display: swap;
 }
 
 /* open-sans-700 - cyrillic */
@@ -40,4 +40,5 @@
   src: local(""),
     url("../fonts/open-sans-v23-cyrillic-700.woff2") format("woff2"),
     url("../fonts/open-sans-v23-cyrillic-700.woff") format("woff");
+  font-display: swap;
 }
