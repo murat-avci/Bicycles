@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="В нашем магазине вы можете преобрести велосипеды высокого качества.">
     <title>Проект «Велосипеды» от HTML Academy</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-300.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-600.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-300.woff2" as="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-regular.woff2" as="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-600.woff2" as="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/open-sans-v23-cyrillic-700.woff2" as="font/woff2" crossorigin="anonymous">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--no-js" type="button"></button>
+        <button class="main-nav__toggle main-nav__toggle--no-js" aria-label="Переключить меню" type="button"><span class="visually-hidden">Переключить меню</span></button>
         <ul class="main-nav__list main-nav__list--no-js">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#benefits">О нас</a>
@@ -34,7 +35,7 @@
       <section class="page-header__wrap page-header__wrap--no-js">
         <div class="intro">
           <a href="#" class="intro__link">
-            <img src="./img/logo.svg" width="68" height="21" alt="Логотип сайта">
+            <img src="./img/logo.svg" width="68" height="21" loading="lazy" alt="Логотип сайта">
           </a>
           <h1>Мы продаем велосипеды</h1>
           <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -78,7 +79,7 @@
                 <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)" srcset="./img/road-bicycle-tablet@1x.jpg 1x, ./img/road-bicycle-tablet@2x.jpg 2x">
                 <!-- 1х: 342px; 2x: 684px -->
-                <img src="./img/road-bicycle-desktop@1x.jpg" srcset="./img/road-bicycle-desktop@2x.jpg 2x" width="342" height="503" alt="Дорожный велосипед">
+                <img src="./img/road-bicycle-desktop@1x.jpg" srcset="./img/road-bicycle-desktop@2x.jpg 2x" width="342" height="503" loading="lazy" alt="Дорожный велосипед">
               </picture>
             </a>
             <h3>Дорожный велосипед</h3>
@@ -91,7 +92,7 @@
                 <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)" srcset="./img/mountain-bike-tablet@1x.jpg 1x, img/mountain-bike-tablet@2x.jpg 2x">
                 <!-- 1х: 342px; 2x: 684px -->
-                <img src="./img/mountain-bike-desktop@1x.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" width="342" height="566" alt="Горный велосипед">
+                <img src="./img/mountain-bike-desktop@1x.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" width="342" height="566" loading="lazy" alt="Горный велосипед">
               </picture>
             </a>
             <h3>Горный велосипед</h3>
@@ -104,7 +105,7 @@
                 <!-- 1х: 270px; 2x: 540px -->
                 <source media="(min-width: 1024px)" srcset="./img/child-bicycle-desktop@1x.jpg 1x, ./img/child-bicycle-desktop@2x.jpg 2x">
                 <!-- 1х: 342px; 2x: 684px -->
-                <img src="./img/child-bicycle-desktop@1x.jpg" srcset="./img/child-bicycle-desktop@2x.jpg 2x" width="342" height="512" alt="Детский велосипед">
+                <img src="./img/child-bicycle-desktop@1x.jpg" srcset="./img/child-bicycle-desktop@2x.jpg 2x" width="342" height="512" loading="lazy" alt="Детский велосипед">
               </picture>
             </a>
             <h3>Детский велосипед</h3>
@@ -127,7 +128,7 @@
           <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         </div>
         <div class="map__iframe">
-          <!-- <iframe class="map__frame-border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2str!4v1629721210555!5m2!1sru!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+          <iframe class="map__frame-border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2str!4v1629721210555!5m2!1sru!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </section>
     </main>
@@ -139,7 +140,7 @@
           +7 (499) -784-684-46</a>
       </div>
     </footer>
-    <script async src="js/vendor.js"></script>
+    <script src="js/vendor.js" async></script>
     <script src="js/main.js"></script>
 </body>
 </html>

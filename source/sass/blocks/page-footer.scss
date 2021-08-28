@@ -26,7 +26,7 @@
 
   &::before {
     position: absolute;
-    content: url("../../img/icon-mail.svg");
+    content: url("../img/icon-mail.svg");
     top: 50%;
     transform: translateY(-38%);
     left: -41px;
@@ -34,7 +34,7 @@
 
   &--indent::before {
     position: absolute;
-    content: url("../../img/icon-phone.svg");
+    content: url("../img/icon-phone.svg");
     top: 50%;
     transform: translateY(-34%);
     left: -37px;

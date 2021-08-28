@@ -19,6 +19,9 @@
     if(!btnToggle.classList.contains('main-nav__toggle--active') && !nav.classList.contains('main-nav__list--active')) {
       btnToggle.classList.add('main-nav__toggle--active');
       nav.classList.add('main-nav__list--active');
+    } else {
+      btnToggle.classList.remove('main-nav__toggle--active');
+      nav.classList.remove('main-nav__list--active');
     }
 
     if(links) {

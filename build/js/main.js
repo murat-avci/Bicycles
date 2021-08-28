@@ -7,26 +7,42 @@
   const inputPhone = document.querySelector('input[name="phone"]');
   const pageHeader = document.querySelector('.page-header__wrap');
 
-  btnToggle.classList.remove('main-nav__toggle--no-js');
-  nav.classList.remove('main-nav__list--no-js');
-  pageHeader.classList.remove('page-header__wrap--no-js');
+  function setInitialMenu () {
+    btnToggle.classList.remove('main-nav__toggle--no-js');
+    nav.classList.remove('main-nav__list--no-js');
+    pageHeader.classList.remove('page-header__wrap--no-js');
+  }
 
-  btnToggle.addEventListener('click', function () {
-    btnToggle.classList.toggle('main-nav__toggle--active');
-    nav.classList.toggle('main-nav__list--active');
-  });
+  function toggleClickHandler (evt) {
+    evt.preventDefault();
 
-  for (let link of links) {
-    link.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      const id = link.getAttribute('href');
-      if (document.querySelector(id)) {
-        document.querySelector(id).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+    if(!btnToggle.classList.contains('main-nav__toggle--active') && !nav.classList.contains('main-nav__list--active')) {
+      btnToggle.classList.add('main-nav__toggle--active');
+      nav.classList.add('main-nav__list--active');
+    } else {
+      btnToggle.classList.remove('main-nav__toggle--active');
+      nav.classList.remove('main-nav__list--active');
+    }
+
+    if(links) {
+      for (let link of links) {
+        link.addEventListener('click', function (evt) {
+          evt.preventDefault();
+          const id = link.getAttribute('href');
+          if (document.querySelector(id)) {
+            document.querySelector(id).scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
         });
       }
-    });
+    }
+  }
+
+  if (btnToggle && nav && pageHeader) {
+    setInitialMenu();
+    btnToggle.addEventListener('click', toggleClickHandler);
   }
 
   const getCorrectName = function () {
