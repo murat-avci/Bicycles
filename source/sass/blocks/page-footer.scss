@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 34px 0 93px;
+  padding: 150px calc((241 / 1440) * 100%) 96px calc((242 / 1440) * 100%);
 }
 
 .page-footer__contacts {
@@ -7,16 +7,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 564px;
-  margin: 0 auto;
+  margin: 36px auto 0;
   padding-right: 18px;
+  align-items: center;
 }
 
 .page-footer__link {
-  @include text(16px,32px,400,$basic-black);
-  display: flex;
+  @include text(16px,22px,400,$basic-black);
+  display: inline-block;
   position: relative;
   align-items: center;
   opacity: 0.5;
+  padding-left: 41px;
 
   &:hover,
   &:focus {
@@ -29,29 +31,34 @@
     content: url("../img/icon-mail.svg");
     top: 50%;
     transform: translateY(-38%);
-    left: -41px;
+    left: 0;
+  }
+
+  &--indent {
+    @include text(16px,32px,400,$basic-black);
+    padding-left: 33px;
+    margin-left: -33px;
+    transform: translateX(1px);
   }
 
   &--indent::before {
     position: absolute;
     content: url("../img/icon-phone.svg");
     top: 50%;
-    transform: translateY(-34%);
-    left: -37px;
+    transform: translateY(-50%);
+    left: -3px;
   }
-}
-
-.page-footer__icon {
-  margin-right: 15px;
 }
 
 @media (max-width: $tablet-width) {
   .page-footer {
-    padding: 21px 35px 52px;
+    padding: 70px calc((35 / 768) * 100%) 52px;
   }
 
   .page-footer__contacts {
     width: 558px;
+    margin-top: 21px;
+    margin-bottom: 0;
     padding-right: 11px;
   }
 
@@ -62,7 +69,7 @@
 
 @media (max-width: $mobile-width) {
   .page-footer {
-    padding: 30px 21px 38px 31px;
+    padding: 70px 0 50px;
   }
 
   .page-footer__contacts {
@@ -70,18 +77,35 @@
     align-items: center;
     width: auto;
     padding: 0;
+    margin-top: 31px;
+    margin-right: auto;
+    text-align: center;
   }
 
   .page-footer__link {
     margin-right: 0;
-    margin-bottom: 22px;
+    padding-left: 41px;
+    margin: 0 auto;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  .page-footer__link--indent {
-    padding-right: 17px;
+  .page-footer__link {
+    padding-left: 47px;
+    &::before {
+      left: 7px;
+    }
+
+    &--indent {
+      padding-left: 23px;
+      margin-top: 24px;
+    }
+
+    &--indent::before {
+      top: 50%;
+      left: -11px;
+    }
   }
 }

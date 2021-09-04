@@ -4,7 +4,6 @@
   const btnToggle = document.querySelector('.main-nav__toggle');
   const links = document.querySelectorAll('a[href^="#"]');
   const inputName = document.querySelector('input[name="name"]');
-  const inputPhone = document.querySelector('input[name="phone"]');
   const pageHeader = document.querySelector('.page-header__wrap');
 
   function setInitialMenu () {
@@ -34,6 +33,8 @@
               behavior: 'smooth',
               block: 'start'
             });
+            nav.classList.remove('main-nav__list--active');
+            btnToggle.classList.remove('main-nav__toggle--active');
           }
         });
       }
@@ -76,7 +77,7 @@
   function InputMask(options) {
     this.el = this.getElement(options.selector);
     if (!this.el) return
-    this.layout = options.layout || '+__ (___) ___-__-__';
+    this.layout = options.layout || '__ (___) ___-__-__';
     this.maskreg = this.getRegexp();
 
     this.setListeners();

@@ -6,10 +6,11 @@
     content: "";
     top: 0;
     width: 100%;
-    height: 825px;
+    min-height: 825px;
+    height: 100%;
     background-image: url("../img/bike-desktop@1x.jpg");
     background-size: cover;
-    background-position: 50% 0;
+    background-position: 1px 0;
     background-repeat: no-repeat;
     background-color: $bg-header;
     z-index: -1;
@@ -22,8 +23,10 @@
 
 @media (max-width: $tablet-width) {
   .page-header::after {
-    height: 340px;
+    min-height: 340px;
+    height: auto;
     background-image: url("../img/bike-tablet@1x.jpg");
+    background-position: 1px 0;
 
     @include retina {
       background-image: url("../img/bike-tablet@2x.jpg");
@@ -33,7 +36,8 @@
 
 @media (max-width: $mobile-width) {
   .page-header::after {
-    height: 390px;
+    min-height: 390px;
+    height: auto;
     background-image: url("../img/bike-mobile@1x.jpg");
 
     @include retina {
@@ -47,15 +51,16 @@
   display: flex;
   justify-content: space-between;
   width: 880px;
+  height: auto;
   margin: 0 auto;
   padding: 254px 0 239px;
 
   &::before {
     position: absolute;
     content: "";
-    top: 0;
-    left: 3px;
-    width: 871.5px;
+    top: -1px;
+    left: 4px;
+    width: 873px;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
@@ -64,6 +69,7 @@
   .page-header__wrap {
     flex-direction: column;
     width: auto;
+    min-height: 549px;
     padding: 134px 50px 0;
 
     &::before {
@@ -72,12 +78,38 @@
   }
 
   .page-header__wrap--no-js {
-    background-color: $bg-header;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 340px;
+      height: auto;
+      background-image: url("../img/bike-tablet@1x.jpg");
+      background-size: cover;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+      background-color: $bg-header;
+      z-index: -1;
+
+      @include retina {
+        background-image: url("../img/bike-tablet@2x.jpg");
+      }
+    }
   }
 }
 
 @media (max-width: $mobile-width) {
   .page-header__wrap {
     padding: 120px 16px 0;
+  }
+
+  .page-header__wrap--no-js {
+    &::after {
+      height: 390px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .types {
-  padding: 150px 109px 150px;
+  padding: 150px 109px 129px;
   text-align: center;
   background-color: #f6f7f9;
 }
@@ -7,34 +7,33 @@
 .types h2 {
   @include block-title;
   margin-bottom: 49px;
-  padding-right: 11px;
 }
 
 .types__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1225px;
   margin: 0 auto;
-  padding: 0 36px 0 60px;
 }
 
 .types__item {
   position: relative;
-  width: 30.5%;
   z-index: 2;
 
   &:nth-child(3n) {
     margin-right: 0;
+    margin-left: 50px;
   }
 
   &:first-child,
   &:nth-child(3n+1) {
     margin-top: 10px;
+    margin-left: 50px;
   }
 
   &:nth-child(3n+2) {
     margin-top: 39px;
+    margin-left: 50px;
   }
 }
 
@@ -76,7 +75,7 @@
 
 .types__link--mountain::after {
   right: -23px;
-  bottom: 31px;
+  bottom: 50px;
 }
 
 .types__link--child::before {
@@ -93,16 +92,19 @@
 .types img {
   display: block;
   border-radius: 10px;
+  width: 100%;
+  height: auto
 }
 
 .types h3 {
   @include text(22px,34px,600,$basic-black);
   letter-spacing: -0.5px;
+  margin-top: 20px;
 }
 
 @media (max-width: $tablet-width) {
   .types {
-    padding: 49px 89px 16px;
+    padding: 50px calc((89 / 768) * 100%) 20px;
   }
 
   .types h2 {
@@ -112,23 +114,22 @@
     line-height: 41px;
   }
 
-  .types__list {
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 0;
-  }
-
   .types__item {
     width: auto;
     margin: 0 auto;
-    margin-bottom: 52px;
+    margin-bottom: 30px;
 
     &:nth-child(odd) {
-      margin-right: 50px;
+      margin-left: 50px;
     }
 
     &:nth-child(3n) {
       margin-right: auto;
+      margin-left: auto;
+    }
+
+    &:first-child {
+      margin-left: 0;
     }
 
     &:first-child,
@@ -148,7 +149,7 @@
   .types__link--road::before {
     top: auto;
     left: -37px;
-    bottom: 26px;
+    bottom: 45px;
     width: 127px;
     height: 127px;
     border: 18px solid $turquoise;
@@ -170,18 +171,25 @@
 
 @media (max-width: $mobile-width) {
   .types {
-    padding: 50px 25px 12px;
+    padding: 50px ((25 / 320) * 100%) 12px;
   }
 
   .types__list {
+    @include reset-list;
     flex-direction: column;
   }
 
   .types__item {
-    margin-bottom: 42px;
+    width: auto;
+    margin: 0 auto 22px;
 
     &:nth-child(odd) {
-      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &:nth-child(3n+2) {
+      margin-top: 0;
+      margin-left: auto;
     }
   }
 

@@ -17,7 +17,7 @@
 
 .form__field input {
   width: 100%;
-  padding: 14px 20px 12px 29px;
+  padding: 14px 20px 10px 28px;
   background: $basic-white;
   border: 1px solid $border;
   border-radius: 4px;
@@ -33,10 +33,15 @@
   }
 }
 
+.form__field {
+  &--tel input {
+    padding: 13px 20px 10px 30px;
+  }
+}
+
 .form__btn {
   @include text(15px,21px,600,$basic-black);
-  width: 326px;
-  height: 51px;
+  padding: 17px 51px 14px 54px;
   background-color: $turquoise;
   border-radius: 6px;
   border: none;
@@ -51,7 +56,7 @@
   .form {
     width: auto;
     margin: 0 auto;
-    padding: 0 173px;
+    padding: 9px 173px;
   }
 
   .form p {
@@ -61,18 +66,18 @@
   }
 
   .form__field input {
-    padding: 13px 20px 13px 21px;
+    padding: 12px 20px 11px 21px;
   }
 
   .form__btn {
-    width: 100%;
+    padding: 17px 50px 13px 50px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .form {
     width: auto;
-    padding: 0;
+    padding: 4px 0;
   }
 
   .form p {
@@ -81,10 +86,11 @@
   }
 
   .form__field input {
-    padding: 13px 21px 13px 25px;
+    padding: 13px 21px 10px 25px;
   }
 
   .form__btn {
-    width: 100%;
+    padding: 14px 33px 16px 32px;
+    // width: 100%;
   }
 }

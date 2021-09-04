@@ -1,29 +1,31 @@
 .video {
   position: relative;
   text-align: center;
+  padding: 120px calc((255 / 1440) * 100%) 0 calc((256 / 1440) * 100%);
 
   &::before {
     position: absolute;
     content: "";
     left: 0;
+    top: 0;
     width: 100%;
-    height: 706px;
+    min-height: 706px;
+    height: calc(100% - 98px);
     background-color: #131314;
     z-index: -1;
   }
 }
 
 .video__desc {
-  width: 929px;
+  max-width: 929px;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 120px;
   padding-bottom: 56px;
 }
 
 .video h2 {
   @include block-title;
   margin-bottom: 20px;
-  padding-right: 10px;
   color: $basic-white;
 }
 
@@ -37,7 +39,7 @@
 
 .video__wrap {
   position: relative;
-  width: 929px;
+  max-width: 929px;
   height: 522px;
   margin: 0 auto;
 }
@@ -48,7 +50,8 @@
   height: 100%;
   background-image: url("../img/backdrop-video-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 929px 522px;
+  background-position: center;
+  background-size: cover;
   background-color: $basic-black;
 
   @include retina {
@@ -78,13 +81,16 @@
 }
 
 @media (max-width: $tablet-width) {
+  .video {
+    padding: 70px calc((132 / 768) * 100%) 0 calc((133 / 768) * 100%);
+  }
   .video::before {
-    height: 413px;
+    min-height: 413px;
+    height: auto;
   }
 
   .video__desc {
     width: 503px;
-    padding-top: 70px;
     padding-bottom: 40px;
   }
 
@@ -98,13 +104,13 @@
   }
 
   .video__wrap {
-    width: 503px;
+    width: 100%;
     height: 282px;
   }
 
   .video__content {
     background-image: url("../img/backdrop-video-tablet@1x.jpg");
-    background-size: 503px 282px;
+    background-size: cover;
 
     @include retina {
       background-image: url("../img/backdrop-video-tablet@2x.jpg");
@@ -119,28 +125,35 @@
 }
 
 @media (max-width: $mobile-width) {
+  .video {
+    padding: 84px calc((16 / 320) * 100%) 0;
+  }
+
   .video::before {
-    height: 384px;
+    min-height: 384px;
   }
 
   .video__desc {
     width: 291px;
-    padding-top: 84px;
     padding-bottom: 53px;
   }
 
   .video h2 {
-    padding-right: 11px;
+    padding-right: 7px;
+  }
+
+  .video p {
+    padding-right: 4px;
   }
 
   .video__wrap {
-    width: 290px;
+    width: 100%;
     height: 162px;
   }
 
   .video__content {
     background-image: url("../img/backdrop-video-mobile@1x.jpg");
-    background-size: 288px 162px;
+    background-size: cover;
 
     @include retina {
       background-image: url("../img/backdrop-video-mobile@2x.jpg");
