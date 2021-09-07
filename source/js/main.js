@@ -25,7 +25,7 @@
       nav.classList.remove('main-nav__list--active');
     }
 
-    closeMenu.addEventListener('click', function (e) {
+    closeMenu.addEventListener('click', function () {
       btnToggle.classList.remove('main-nav__toggle--active');
       nav.classList.remove('main-nav__list--active');
     })
