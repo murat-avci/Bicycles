@@ -5,6 +5,7 @@
   const links = document.querySelectorAll('a[href^="#"]');
   const inputName = document.querySelector('input[name="name"]');
   const pageHeader = document.querySelector('.page-header__wrap');
+  const closeMenu = document.querySelector('.main-nav__close');
 
   function setInitialMenu () {
     btnToggle.classList.remove('main-nav__toggle--no-js');
@@ -14,6 +15,7 @@
 
   function toggleClickHandler (evt) {
     evt.preventDefault();
+    const scrollY = window.pageYOffset;
 
     if(!btnToggle.classList.contains('main-nav__toggle--active') && !nav.classList.contains('main-nav__list--active')) {
       btnToggle.classList.add('main-nav__toggle--active');
@@ -22,6 +24,12 @@
       btnToggle.classList.remove('main-nav__toggle--active');
       nav.classList.remove('main-nav__list--active');
     }
+
+    closeMenu.addEventListener('click', function (e) {
+      btnToggle.classList.remove('main-nav__toggle--active');
+      nav.classList.remove('main-nav__list--active');
+    })
+
 
     if(links) {
       for (let link of links) {

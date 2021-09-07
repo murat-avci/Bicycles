@@ -18,6 +18,7 @@
       <nav class="main-nav">
         <button class="main-nav__toggle main-nav__toggle--no-js" aria-label="Переключить меню" type="button"><span class="visually-hidden">Переключить меню</span></button>
         <ul class="main-nav__list main-nav__list--no-js">
+          <button class="main-nav__close" aria-label="Закрыть меню"><span class="visually-hidden">Закрыть меню</span></button>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#benefits">О нас</a>
           </li>
@@ -70,11 +71,10 @@
       </section>
       <section class="types" id="types">
         <h2>Виды велосипедов</h2>
-        <div class="types__wrap">
           <ul class="types__list">
             <li class="types__item">
               <a class="types__link types__link--road" href="#">
-                <div>
+                <div class="types__img types__img--road">
                   <picture>
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/road-bicycle-tablet@1x.webp 1x, img/road-bicycle-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/road-bicycle-desktop@1x.webp 1x, img/road-bicycle-desktop@2x.webp 2x">
@@ -89,32 +89,35 @@
             </li>
             <li class="types__item types__item--indent">
               <a class="types__link types__link--mountain" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain-bike-tablet@1x.webp 1x, img/mountain-bike-tablet@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(max-width: 1023px)" srcset="img/mountain-bike-tablet@1x.jpg 1x, img/mountain-bike-tablet@2x.jpg 2x">
-                  <source type="image/webp" srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
-                  <!-- 1х: 342px; 2x: 684px -->
-                  <img src="img/mountain-bike-desktop@1x.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" width="342" height="566" loading="lazy" alt="Горный велосипед">
-                </picture>
+                <div class="types__img types__img--mountain">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain-bike-tablet@1x.webp 1x, img/mountain-bike-tablet@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(max-width: 1023px)" srcset="img/mountain-bike-tablet@1x.jpg 1x, img/mountain-bike-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
+                    <!-- 1х: 342px; 2x: 684px -->
+                    <img src="img/mountain-bike-desktop@1x.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" width="342" height="566" loading="lazy" alt="Горный велосипед">
+                  </picture>
+                </div>
                 <h3>Горный велосипед</h3>
               </a>
             </li>
             <li class="types__item">
               <a class="types__link types__link--child" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/child-bicycle-tablet@1x.webp 1x, img/child-bicycle-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/child-bicycle-desktop@1x.webp 1x, img/child-bicycle-desktop@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <source media="(max-width: 1023px)" srcset="img/child-bicycle-tablet@1x.jpg 1x, img/child-bicycle-tablet@2x.jpg 2x">
-                  <!-- 1х: 342px; 2x: 684px -->
-                  <img src="img/child-bicycle-desktop@1x.jpg" srcset="img/child-bicycle-desktop@2x.jpg 2x" width="342" height="512" loading="lazy" alt="Детский велосипед">
-                </picture>
+                <div class="types__img types__img--child">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/child-bicycle-tablet@1x.webp 1x, img/child-bicycle-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/child-bicycle-desktop@1x.webp 1x, img/child-bicycle-desktop@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source media="(max-width: 1023px)" srcset="img/child-bicycle-tablet@1x.jpg 1x, img/child-bicycle-tablet@2x.jpg 2x">
+                    <!-- 1х: 342px; 2x: 684px -->
+                    <img src="img/child-bicycle-desktop@1x.jpg" srcset="img/child-bicycle-desktop@2x.jpg 2x" width="342" height="512" loading="lazy" alt="Детский велосипед">
+                  </picture>
+                </div>
                 <h3>Детский велосипед</h3>
               </a>
             </li>
           </ul>
-        </div>
       </section>
       <section class="video" id="video">
         <div class="video__desc">

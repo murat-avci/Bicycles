@@ -10,31 +10,17 @@
 }
 
 .types__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
   max-width: 1225px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .types__item {
-  position: relative;
   z-index: 2;
-
-  &:nth-child(3n) {
-    margin-right: 0;
-    margin-left: 50px;
-  }
-
-  &:first-child,
-  &:nth-child(3n+1) {
-    margin-top: 10px;
-    margin-left: 50px;
-  }
-
-  &:nth-child(3n+2) {
-    margin-top: 39px;
-    margin-left: 50px;
-  }
 }
 
 .types__item--indent {
@@ -47,53 +33,58 @@
   vertical-align: middle;
 }
 
-.types__link--road::before {
-  position: absolute;
-  content: "";
-  top: 156px;
-  left: -60px;
-  width: 180px;
-  height: 180px;
-  border: 27px solid $turquoise;
-  border-radius: 50%;
-  z-index: -1;
-}
+.types__img {
+  position: relative;
 
-.types__link--mountain::before,
-.types__link--mountain::after {
-  position: absolute;
-  content: "";
-  width: 47px;
-  height: 47px;
-  border: 8px solid $turquoise;
-}
+  &--road::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -60px;
+    width: 180px;
+    height: 180px;
+    border: 27px solid $turquoise;
+    border-radius: 50%;
+    z-index: -1;
+  }
 
-.types__link--mountain::before {
-  top: -18px;
-  left: -19px;
-}
+  &--mountain::before,
+  &--mountain::after {
+    position: absolute;
+    content: "";
+    width: 47px;
+    height: 47px;
+    border: 8px solid $turquoise;
+  }
 
-.types__link--mountain::after {
-  right: -23px;
-  bottom: 50px;
-}
+  &--mountain::before {
+    top: -18px;
+    left: -19px;
+  }
 
-.types__link--child::before {
-  position: absolute;
-  content: "";
-  top: -32px;
-  right: -36px;
-  width: 95px;
-  height: 95px;
-  border: 17px solid $turquoise;
-  border-radius: 50%;
+  &--mountain::after {
+    right: -24px;
+    bottom: -24px;
+  }
+
+  &--child::before {
+    position: absolute;
+    content: "";
+    top: -32px;
+    right: -36px;
+    width: 95px;
+    height: 95px;
+    border: 17px solid $turquoise;
+    border-radius: 50%;
+  }
 }
 
 .types img {
   display: block;
   border-radius: 10px;
   width: 100%;
-  height: auto
+  height: auto;
 }
 
 .types h3 {
@@ -104,7 +95,7 @@
 
 @media (max-width: $tablet-width) {
   .types {
-    padding: 50px calc((89 / 768) * 100%) 20px;
+    padding: 50px calc((89 / 768) * 100%) 70px;
   }
 
   .types h2 {
@@ -114,30 +105,21 @@
     line-height: 41px;
   }
 
+  .types__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
   .types__item {
     width: auto;
     margin: 0 auto;
-    margin-bottom: 30px;
-
-    &:nth-child(odd) {
-      margin-left: 50px;
-    }
-
-    &:nth-child(3n) {
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    &:first-child {
-      margin-left: 0;
-    }
+    margin-top: 50px;
 
     &:first-child,
-    &:nth-child(3n+1) {
-      margin-top: 0;
-    }
-
-    &:nth-child(3n+2) {
+    &:nth-child(2) {
       margin-top: 0;
     }
   }
@@ -146,26 +128,29 @@
     margin-top: 0;
   }
 
-  .types__link--road::before {
-    top: auto;
-    left: -37px;
-    bottom: 45px;
-    width: 127px;
-    height: 127px;
-    border: 18px solid $turquoise;
-  }
+  .types__img {
+    &--road::before {
+      transform: none;
+      top: auto;
+      bottom: -28px;
+      left: -37px;
+      width: 127px;
+      height: 127px;
+      border: 18px solid $turquoise;
+    }
 
-  .types__link--mountain::before,
-  .types__link--mountain::after {
-    display: none;
-  }
+    &--mountain::before,
+    &--mountain::after {
+      display: none;
+    }
 
-  .types__link--child::before {
-    top: -20px;
-    right: -25px;
-    width: 68px;
-    height: 68px;
-    border: 13px solid $turquoise;
+    &--child::before {
+      top: -20px;
+      right: -25px;
+      width: 68px;
+      height: 68px;
+      border: 13px solid $turquoise;
+    }
   }
 }
 
@@ -193,11 +178,11 @@
     }
   }
 
-  .types__link--road::before {
+  .types__img--road::before {
     left: -24px;
   }
 
-  .types__link--child::before {
+  .types__img--child::before {
     right: -15px;
   }
 }

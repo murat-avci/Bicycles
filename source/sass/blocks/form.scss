@@ -56,7 +56,7 @@
   .form {
     width: auto;
     margin: 0 auto;
-    padding: 9px 173px;
+    padding: 9px calc((173 / 768) * 100%);
   }
 
   .form p {
@@ -70,7 +70,8 @@
   }
 
   .form__btn {
-    padding: 17px 50px 13px 50px;
+    padding: 17px calc((50 / 321) * 100%) 13px;
+    width: 100%;
   }
 }
 
