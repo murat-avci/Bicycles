@@ -25,7 +25,7 @@
       nav.classList.remove('main-nav__list--active');
     }
 
-    closeMenu.addEventListener('click', function (e) {
+    closeMenu.addEventListener('click', function () {
       btnToggle.classList.remove('main-nav__toggle--active');
       nav.classList.remove('main-nav__list--active');
     })
@@ -79,13 +79,12 @@
         layout: input.dataset.mask
       })
     })
-
   })
 
   function InputMask(options) {
     this.el = this.getElement(options.selector);
     if (!this.el) return
-    this.layout = options.layout || '__ (___) ___-__-__';
+    this.layout = options.layout || '+_ (___) ___-__-__';
     this.maskreg = this.getRegexp();
 
     this.setListeners();

@@ -79,13 +79,12 @@
         layout: input.dataset.mask
       })
     })
-
   })
 
   function InputMask(options) {
     this.el = this.getElement(options.selector);
     if (!this.el) return
-    this.layout = options.layout || '__ (___) ___-__-__';
+    this.layout = options.layout || '+_ (___) ___-__-__';
     this.maskreg = this.getRegexp();
 
     this.setListeners();
